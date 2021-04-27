@@ -1,19 +1,29 @@
 <div class="header">
-  <div class="content">
-    <p class="logo brandon"> GrowGrows</p>
-    <p class="byline brandon">THANK YOU FOR SIGNING UP</p>
+    <div class="container content">
+    <div class="row">
+      <div class="col-6">
+        <%=image_tag 'refer/logo.png', style: "height:25px;" %>
+      </div>
+      <div class="col-6">
+        Thanks for registering, you’re now a VIP member        
+      </div>
+    </div>
   </div>
+  <!-- <div class="content">
+    <p class="logo brandon"> GrowGrows Thanks for registering, you’re now a VIP member</p>
+    <p class="byline brandon">THANK YOU FOR SIGNING UP</p>
+  </div> -->
 </div>
 
 <div class="hero">
   <div class="page-content clearfix">
     <div class="mammoth">
-      <span class="need brandon">Shaving Is<br>Evolving</span>
+      <span class="need brandon">Premium, sustainable,<br/> eco-friendly baby grows<br/> that just so happen to<br/> look cool AF</span>
     </div>
     <div class="share-wrap">
       <p class="why brandon">Don't leave your friends behind</p>
-      <p class="title brandon">INVITE FRIENDS &<br>Earn Product</p>
-      <p class="subtitle brandon">Share your unique link via email, Facebook<br>or Twitter and earn Harry's goods for<br>each friend who signs up.</p>
+      <p class="title brandon">INVITE FRIENDS AND GET MORE FREE SHIT</p>
+      <p class="subtitle brandon">Share your unique link via email, Facebook, Twitter or Instagram and earn GrowGrows stuff for each friend who signs up.</p>
       <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
       <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
       <div class="social-links">
@@ -22,6 +32,19 @@
         <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"></a>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="row">
+  <h1>Here's how it works</h1>
+  <div class="span4">
+    You’re already eligible for a free baby grow worth £24.95 
+  </div>
+  <div class="span4">
+    Invite friends to earn additional bonuses
+  </div>
+  <div class="span4">
+    Redeem your free baby grow and referral bonuses with your first order when we launch
   </div>
 </div>
 
@@ -43,9 +66,9 @@
 %>
 <div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
   <div class="page-content">
-    <p class="callout brandon">Here's How It Works:</p>
+    <p class="callout brandon">Earn more free shit:</p>
     <ul class="products clearfix">
-      <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards">Harry's Product</p></li>
+      <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards">GROWGROWS REWARDS</p></li>
       <% stops.each do |stop| %>
         <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
           <div class="circle"><%= stop["count"] %></div>
@@ -81,7 +104,8 @@
     <% end %>
     <p class="check brandon">Keep checking</p>
 
-    <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p>
+    <!-- <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p> -->
     <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
+    <!-- <a class="policy brandon" href="/terms-condition" target="_blank">Terms and Conditions</a> -->
   </div>
 </div>
