@@ -1,9 +1,18 @@
 <div class="hero">
-  <p class="large brandon">Harry&#8217;s is live</p>
-  <p class="small brandon">Respecting the Face and Wallet<br>Since Like...Right Now.</p>
+  <p class="large brandon">GrowGrows is coming...</p>
+  <p class="small brandon">Organic, soft and sustainable baby grows that just so happen to look cool AF.
+    <br/><br/>
+    Monthly subscriptions starting from £24.95.
+    <br/><br/>
+    Join our VIP waiting list and you’ll receive a FREE baby grow (worth £24.95) with your first order when we launch on.... XYZ.
+    <br/><br/>
+  </p>
+  <p class="small brandon"></p>
 </div>
 
-<div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
+
+
+<div class="row form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
   <% if Rails.application.config.ended %>
     <%= render "users/campaign_ended" %>
   <% else %>
