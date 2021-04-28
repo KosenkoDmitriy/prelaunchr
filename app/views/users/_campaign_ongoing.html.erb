@@ -6,9 +6,18 @@
 <% end %> -->
 
 
-<div class="input-append">
+<!-- <div class="input-append">
   <%= form_for @user, :url => { :action => "create" } do |f| %>
     <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon span2 search-query" %>
     <button type="submit" class="btn brandon submit">Step Inside</button>
-  <%end%>
+  <% end %>
+</div> -->
+
+
+<div class="input-group mb-3">
+  <%= form_for @user, :url => { :action => "create" } do |f| %>
+    <%= f.text_field :email, :placeholder => "Enter Email", :class => "email form-control", html: {'aria-describedby': "basic-addon2"} %>
+    <!-- <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2"> -->
+    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Step Inside</button>
+    <% end %>
 </div>
