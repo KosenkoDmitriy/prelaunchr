@@ -1,11 +1,12 @@
 <div class="header">
-    <div class="container content">
-    <div class="row">
-      <div class="col-6">
-        <%=image_tag 'refer/logo.png', style: "height:25px;" %>
+    <div class="container">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="">
+        <%=image_tag 'refer/logo.png', class:'img-fluid', style: "height:80px; padding:12px 5px;" %>
+        <%#=image_tag 'refer/logo.png', class:'img-fluid' #%>
       </div>
-      <div class="col-6">
-        Thanks for registering, you’re now a VIP member        
+      <div class="">
+        <h4>Thanks for registering, you’re now a VIP member</h4>
       </div>
     </div>
   </div>
@@ -35,16 +36,21 @@
   </div>
 </div>
 
-<div class="row">
-  <h1>Here's how it works</h1>
-  <div class="span4">
-    You’re already eligible for a free baby grow worth £24.95 
-  </div>
-  <div class="span4">
-    Invite friends to earn additional bonuses
-  </div>
-  <div class="span4">
-    Redeem your free baby grow and referral bonuses with your first order when we launch
+<div id="howto">
+  <div class="row">
+    <h5 class="text-center">Here's how it works</h5>
+    <div class="col text-center">
+      <%= image_tag 'howitworks/icon', class: 'img-fluid' %>
+      <p>You’re already eligible for a free baby grow worth £24.95 </p>
+    </div>
+    <div class="col text-center">
+      <%= image_tag 'howitworks/icon', class: 'img-fluid' %>
+      <p>Invite friends to earn additional bonuses</p>
+    </div>
+    <div class="col text-center">
+      <%= image_tag 'howitworks/icon', class: 'img-fluid' %>
+      <p>Redeem your free baby grow and referral bonuses with your first order when we launch</p>
+    </div>
   </div>
 </div>
 
