@@ -1,21 +1,32 @@
+
 <div class="hero">
-  <p class="large brandon">GrowGrows is coming...</p>
-  <p class="small brandon">Organic, soft and sustainable baby grows that just so happen to look cool AF.
-    <br/><br/>
-    Monthly subscriptions starting from £24.95.
-    <br/><br/>
-    Join our VIP waiting list and you’ll receive a FREE baby grow (worth £24.95) with your first order when we launch on.... XYZ.
-    <br/><br/>
-  </p>
-  <p class="small brandon"></p>
+  <div class="row">
+    <div class="col">
+      <%= image_tag 'refer/logo', class: 'img-fluid m-4', style: "height: 50px; width: auto;" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-5 mt-4 px-5 justify-content-center">
+      <h4 class="mb-4 text-blue">GrowGrows is coming...</h4>
+      <p class="text-gray-500">Organic, soft and sustainable baby grows that just so happen to look cool AF.
+        <br/><br/>
+        Monthly subscriptions starting from £24.95.
+        <br/><br/>
+        Join our VIP waiting list and you’ll receive a FREE baby grow (worth £24.95) with your first order when we launch on.... XYZ.
+        <br/><br/>
+      </p>
+    </div>
+    <div class="col">
+      <p class="small brandon"></p>
+    </div>
+  </div>
 </div>
-
-
-
-<div class="row form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
+<div class="blue ">
+  <div style="height: auto;" class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
   <% if Rails.application.config.ended %>
     <%= render "users/campaign_ended" %>
   <% else %>
     <%= render "users/campaign_ongoing" %>
   <% end %>
+  </div>
 </div>

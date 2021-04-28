@@ -65,9 +65,9 @@ html.home{
 }
 
 #home .form-wrap{
-	height: 80px;
-	width: 411px;
-	margin: 23px auto 0;
+	// height: 120px;
+	width: 440px;
+	margin: 0px auto;
 }
 
 #home .form-wrap .key{
@@ -674,6 +674,17 @@ only screen and (min-device-pixel-ratio: 2) {
 	}
 }
 
+.text-blue {
+  color: #1e415a;
+}
+.text-gray-500 {
+  color: #5d5d5d;
+}
+
+.blue {
+  background-color: #1fa3a7 !important;
+  color: #fafafa;
+}
 #howto {
   background-color: #1fa3a7 !important;
   color: #fafafa;
