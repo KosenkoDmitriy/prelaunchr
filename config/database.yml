@@ -1,8 +1,16 @@
+default: &default
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+
 development:
-  adapter: postgresql
-  database: prelaunchr_development
-  host: localhost
+  <<: *default
+  database: db/prelaunchr_development.sqlite3
+
 test:
-  adapter: postgresql
-  database: prelaunchr_test
-  host: localhost
+  <<: *default
+  database: db/prelaunchr_test.sqlite3
+
+production:
+  <<: *default
+  database: db/prelaunchr_production.sqlite3
